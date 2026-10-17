@@ -104,6 +104,18 @@ Every rule is in [skills/find-leads/reference/scorecard.md](skills/find-leads/re
 - Everything dated, so you know how fresh it is.
 - If fewer companies survive checking than you asked for, it tells you instead of padding the list.
 
+## What it connects to
+
+There is no Lead Finder server, and nothing is sent to MachGTM. Everything runs in your own Claude session.
+
+| Connection | What for | What is sent |
+|---|---|---|
+| Claude's web search and web fetch | Finding companies and reading their own pages, careers pages and news | Your search queries and the pages Claude opens |
+| Seven public job-board APIs (read-only, no key): Greenhouse, Lever, Ashby, SmartRecruiters, Recruitee, Breezy HR, Personio | `hiring.py` checks open roles and the date each was posted | A guessed board name per company (for example `acme`), with the user agent `lead-finder/1.0 (+https://machgtm.com)` |
+| Your disk | Writing `leads.json`, `leads.csv` and `leads.md` | Nothing |
+
+No API keys, no logins, no cookies, no analytics. Every endpoint is in [hiring.py](skills/find-leads/scripts/hiring.py), and the skill can only run the two scripts in its own folder.
+
 ## FAQ
 
 **Does it send emails?** No. It finds and ranks companies and suggests a first question. What you send is up to you.
