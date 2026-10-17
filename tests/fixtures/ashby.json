@@ -1,0 +1,4 @@
+{"apiVersion": "1", "jobs": [
+  {"title": "Account Executive", "location": "Remote", "publishedAt": "2026-10-05T12:00:00.000+00:00", "jobUrl": "https://jobs.ashbyhq.com/acme/1", "isListed": true},
+  {"title": "Internal Transfer", "location": "Remote", "publishedAt": "2026-10-06T12:00:00.000+00:00", "jobUrl": "https://jobs.ashbyhq.com/acme/2", "isListed": false}
+]}

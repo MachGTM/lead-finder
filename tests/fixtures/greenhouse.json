@@ -1,0 +1,4 @@
+{"jobs": [
+  {"id": 101, "title": "Senior Backend Engineer", "updated_at": "2026-08-15T09:00:00-04:00", "location": {"name": "Remote, India"}, "absolute_url": "https://boards.greenhouse.io/acme/jobs/101"},
+  {"id": 102, "title": "Business Development Manager, US", "first_published": "2026-10-02T10:00:00-04:00", "updated_at": "2026-10-05T10:00:00-04:00", "location": {"name": "New York"}, "absolute_url": "https://boards.greenhouse.io/acme/jobs/102"}
+], "meta": {"total": 2}}

@@ -1,0 +1,56 @@
+{
+  "icp": {
+    "summary": "Software services firms that sell to the US and Europe",
+    "signs": [
+      {
+        "id": "services",
+        "label": "Sells custom software development or IT services",
+        "weight": 3
+      },
+      {
+        "id": "abroad",
+        "label": "Has clients or case studies in the US or Europe",
+        "weight": 3
+      },
+      {
+        "id": "size",
+        "label": "50 to 1,000 employees",
+        "weight": 2,
+        "required": true
+      },
+      {
+        "id": "case_studies",
+        "label": "Publishes case studies by industry",
+        "weight": 1
+      },
+      {
+        "id": "india_delivery",
+        "label": "Delivery team in India",
+        "weight": 1
+      }
+    ],
+    "signals": [
+      {
+        "id": "hiring_bd",
+        "label": "Hiring sales, business development or partnerships",
+        "weight": 3
+      },
+      {
+        "id": "new_market",
+        "label": "Opened a new office or entered a new market",
+        "weight": 2
+      },
+      {
+        "id": "funding",
+        "label": "Raised funding or was acquired",
+        "weight": 2
+      },
+      {
+        "id": "new_sales_leader",
+        "label": "New head of sales or growth",
+        "weight": 2
+      }
+    ]
+  },
+  "leads": []
+}

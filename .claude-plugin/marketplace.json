@@ -1,0 +1,12 @@
+{
+  "name": "machgtm",
+  "description": "Sales tools from MachGTM that show their sources.",
+  "owner": { "name": "MachGTM", "url": "https://machgtm.com" },
+  "plugins": [
+    {
+      "name": "lead-finder",
+      "source": "./",
+      "description": "Find B2B companies that fit your ideal customer and show a buying signal now, with a source for every claim."
+    }
+  ]
+}

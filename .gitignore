@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+# your own runs
+leads.json
+leads.csv
+leads.md
