@@ -34,6 +34,13 @@ The scores come from a small script with a fixed formula, not from the model's m
 
 **Claude desktop, web and Cowork**: Customize › Plugins › Add › Add marketplace › `machgtm/lead-finder`.
 
+**Codex**: the skills follow the open Agent Skills format. Install each one from its GitHub folder:
+
+```
+$skill-installer install https://github.com/MachGTM/lead-finder/tree/main/skills/find-leads
+$skill-installer install https://github.com/MachGTM/lead-finder/tree/main/skills/check-receipts
+```
+
 Then just ask:
 
 > Find 25 leads. I sell a security review to B2B SaaS companies with 20 to 200 people in Europe. Must-have: sells to enterprises. Buying signals: hiring a first security engineer, recent funding.
@@ -69,6 +76,16 @@ For every company:
 Saved as `leads.csv` for your CRM or sheet, and `leads.md` to read and share.
 
 Hiring is checked live on seven public job boards (Greenhouse, Lever, Ashby, SmartRecruiters, Recruitee, Breezy HR and Personio), so "hiring a BD manager" comes with the post and its date.
+
+## Check any email for receipts
+
+New in 1.1: paste a cold email and ask Claude to check it.
+
+> Check this email for receipts: ...
+
+Claude finds every claim, looks for a public page that backs it, and turns the rest into questions or takes them out. A small script scores it against the [Receipts Standard](https://github.com/MachGTM/receipts/blob/main/STANDARD.md): "Receipts: 4 of 6 claims (67)". You get a table of claims and sources, and a rewritten email with footnotes. It won't invent a source to make the email pass.
+
+Want a quick check without Claude? The [receipts check](https://machgtm.github.io/receipts/check/) does a pattern check in your browser.
 
 ## How it works
 
@@ -112,9 +129,9 @@ There is no Lead Finder server, and nothing is sent to MachGTM. Everything runs 
 |---|---|---|
 | Claude's web search and web fetch | Finding companies and reading their own pages, careers pages and news | Your search queries and the pages Claude opens |
 | Seven public job-board APIs (read-only, no key): Greenhouse, Lever, Ashby, SmartRecruiters, Recruitee, Breezy HR, Personio | `hiring.py` checks open roles and the date each was posted | A guessed board name per company (for example `acme`), with the user agent `lead-finder/1.0 (+https://machgtm.com)` |
-| Your disk | Writing `leads.json`, `leads.csv` and `leads.md` | Nothing |
+| Your disk | Writing `leads.json`, `leads.csv`, `leads.md`, `receipts.json` and `receipts.md` | Nothing |
 
-No API keys, no logins, no cookies, no analytics. Every endpoint is in [hiring.py](skills/find-leads/scripts/hiring.py), and the skill can only run the two scripts in its own folder.
+No API keys, no logins, no cookies, no analytics. Every endpoint is in [hiring.py](skills/find-leads/scripts/hiring.py), and each skill can only run the scripts in its own folder.
 
 ## FAQ
 
@@ -135,6 +152,7 @@ Python 3.10 or newer, standard library only.
 ```
 python3 skills/find-leads/scripts/hiring.py "Acme Labs" acme.io --keywords "sales,business development" --days 180 --signal-id hiring_bd
 python3 skills/find-leads/scripts/score.py leads.json
+python3 skills/check-receipts/scripts/receipts.py receipts.json
 ```
 
 ## Tests
@@ -143,7 +161,7 @@ python3 skills/find-leads/scripts/score.py leads.json
 python3 -m unittest discover -s tests -v
 ```
 
-46 tests, including responses recorded from all seven job boards. A weekly CI job calls the live boards to catch API changes.
+60 tests, including responses recorded from all seven job boards. A weekly CI job calls the live boards to catch API changes.
 
 ## From a list to meetings
 
