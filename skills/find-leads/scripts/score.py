@@ -282,7 +282,7 @@ def write_md(rows: list[dict], data: dict, as_of: dt.date, path: Path) -> None:
         if r["first_question"]:
             lines += ["", f"A first question to ask: {md_escape(r['first_question'])}"]
         lines.append("")
-    lines.append("Made with [Lead Finder](https://machgtm.com) by MachGTM. Every claim above links to where it was found.")
+    lines.append("Every claim above links to where it was found.")
     path.write_text("\n".join(lines), encoding="utf-8")
 
 
