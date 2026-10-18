@@ -1,8 +1,8 @@
 {
   "name": "lead-finder",
   "displayName": "Lead Finder by MachGTM",
-  "description": "Find B2B companies that fit your ideal customer and show a buying signal now. Every claim has a source; scores come from a fixed formula, not the model.",
-  "version": "1.0.1",
+  "description": "Find B2B companies that fit your ideal customer and show a buying signal now, and check any sales email for receipts. Every claim has a source; scores come from a fixed formula, not the model.",
+  "version": "1.1.0",
   "author": { "name": "MachGTM", "url": "https://machgtm.com" },
   "homepage": "https://machgtm.com",
   "license": "MIT",
