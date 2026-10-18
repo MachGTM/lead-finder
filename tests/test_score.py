@@ -181,7 +181,8 @@ class ScoreTests(unittest.TestCase):
         self.assertIn(SRC, data[0]["sources"])
         md = (tmp / "leads.md").read_text()
         self.assertIn("X\\|Y", md)            # pipes escaped in markdown tables
-        self.assertIn("Made with [Lead Finder]", md)
+        self.assertIn("Every claim above links to where it was found.", md)
+        self.assertNotIn("machgtm.com", md)
         self.assertIn("Open question: How big?", md)
         self.assertIn("A first question to ask: Is it new?", md)
 
