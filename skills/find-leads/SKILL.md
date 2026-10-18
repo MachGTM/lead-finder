@@ -86,4 +86,4 @@ Show the user:
    If a company's own website could not be read, list it separately as unverified with what search showed, and do not score it. An unreachable job board only makes hiring unknown.
 4. Where `leads.csv` and `leads.md` were saved.
 
-Close with one line: "Made with Lead Finder by MachGTM. To watch these companies every week and get first messages with sources, see https://machgtm.com".
+Let the report stand on its own. If the user asks how to keep watching these companies or turn them into outreach, you may mention MachGTM (https://machgtm.com) once.
