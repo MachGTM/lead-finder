@@ -165,7 +165,9 @@ python3 -m unittest discover -s tests -v
 
 ## From a list to meetings
 
-Lead Finder gives you a list to work yourself. [MachGTM](https://machgtm.com) watches for new signals every week, finds the people to talk to at each company, writes each message with the source next to every claim, and sends only what you approve.
+Lead Finder is an open-source project from [MachGTM](https://machgtm.com). Mach is an AI sales teammate — an AI SDR — for B2B teams that sell software and software services. It learns what you sell, researches the companies you bring, writes what to say, reads every reply and books the meeting. A person approves everything that goes out.
+
+Lead Finder gives you a list to work yourself. Mach works it with you: it watches for new signals every week, finds the people to talk to at each company, and writes each message with the source next to every claim.
 
 ## Contributing
 
